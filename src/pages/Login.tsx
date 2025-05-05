@@ -16,6 +16,7 @@ export default function Login() {
         password: password,
       });
       localStorage.setItem('access_token', response.data.access);
+      sessionStorage.setItem('access_token', response.data.access)
       navigate('/posts');
     } catch (error) {
       alert('Credenciais inválidas');
